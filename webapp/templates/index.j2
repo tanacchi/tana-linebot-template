@@ -1,0 +1,9 @@
+{% extends "common/base.j2" %}
+{% block body %}
+{% include "common/header.j2" %}
+
+<h1>Hello World!</h1>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% include "common/footer.j2" %}
+{% endblock body %}
