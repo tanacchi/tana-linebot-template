@@ -1,6 +1,11 @@
 # tana-linebot-template
 Template of LINE Bot
 
+## Requirements
+
+- Docker & docker-compose
+- Heroku CLI
+
 ## Getting started
 
 プロジェクト直下に `linebot.env` を置くこと
