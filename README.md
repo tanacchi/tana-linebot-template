@@ -38,3 +38,6 @@ CHANNEL_SECRET=XXXXXXXXX
 4. `make kill`
    ローカルで起動しているアプリケーションを終了します．
 
+5. `make restart`
+   サーバーを再起動します．
+   
