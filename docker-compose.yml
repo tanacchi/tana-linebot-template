@@ -1,10 +1,26 @@
 version: '3.4'
 
 services:
-  myflaskapp:
-    image: myflaskapp
+  mylinebot:
+    container_name: mylinebot
+    restart: on-failure
+    image: mylinebot
     build:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - 5000:5000
+      - "8000:8000"
+    env_file:
+      - "linebot.env"
+    volumes:
+      - ".:/app"
+
+  localtunnel:
+    container_name: localtunnel
+    image: efrecon/localtunnel
+    links:
+      - mylinebot
+    depends_on:
+      - mylinebot
+    command:
+      --local-host mylinebot --port 8000 --subdomain tanalinebot
