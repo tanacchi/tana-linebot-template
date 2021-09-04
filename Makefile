@@ -16,7 +16,7 @@ deploy:
 
 up:
 	docker-compose up -d
-	$(OPEN_CMD) http://localhost:5000
+	$(OPEN_CMD) http://localhost:8000
 	docker-compose logs -tf
 
 log:
