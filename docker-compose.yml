@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   mylinebot:
+    container_name: mylinebot
     image: mylinebot
     build:
       context: .
@@ -12,3 +13,15 @@ services:
       - "linebot.env"
     volumes:
       - ".:/app"
+
+  localtunnel:
+    container_name: localtunnel
+    image: efrecon/localtunnel
+    links:
+      - mylinebot
+    env_file:
+      - "linebot.env"
+    depends_on:
+      - mylinebot
+    command:
+      --local-host mylinebot --port 5000 --subdomain tanaline
