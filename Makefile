@@ -24,3 +24,6 @@ log:
 
 kill:
 	docker-compose down
+
+restart:
+	docker-compose restart
