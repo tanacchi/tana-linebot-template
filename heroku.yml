@@ -4,4 +4,4 @@ build:
 
 run:
   web:
-    gunicorn server:app --log-file=-
+    gunicorn server:app -w 2 --log-file=-

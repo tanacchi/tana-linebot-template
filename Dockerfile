@@ -13,4 +13,4 @@ USER appuser
 
 COPY . .
 
-CMD ["gunicorn", "server:app", "-w", "2", "--reload"]
+CMD ["gunicorn", "server:app", "--reload"]
