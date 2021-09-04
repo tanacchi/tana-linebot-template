@@ -3,6 +3,7 @@ version: '3.4'
 services:
   mylinebot:
     container_name: mylinebot
+    restart: on-failure
     image: mylinebot
     build:
       context: .
