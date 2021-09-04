@@ -1,0 +1,7 @@
+build:
+  docker:
+    web: Dockfile
+
+run:
+  web:
+    gunicorn server:app --log-file=-
