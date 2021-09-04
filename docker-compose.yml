@@ -19,9 +19,7 @@ services:
     image: efrecon/localtunnel
     links:
       - mylinebot
-    env_file:
-      - "linebot.env"
     depends_on:
       - mylinebot
     command:
-      --local-host mylinebot --port 5000 --subdomain tanaline
+      --local-host mylinebot --port 5000 --subdomain tanalinebot
