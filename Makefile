@@ -14,9 +14,9 @@ deploy:
 	@echo Done.
 	heroku open
 
-run:
+up:
 	docker-compose up -d
-	$(OPEN_CMD) http://localhost:8000
+	$(OPEN_CMD) http://localhost:5000
 
 log:
 	heroku logs -t
