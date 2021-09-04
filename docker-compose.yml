@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  myflaskapp:
-    image: myflaskapp
+  mylinebot:
+    image: mylinebot
     build:
       context: .
       dockerfile: ./Dockerfile
